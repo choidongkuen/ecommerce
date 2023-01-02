@@ -2,10 +2,7 @@ package com.example.userapi.domain.model;
 
 
 import com.example.userapi.domain.SignUpForm;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.envers.AuditOverride;
 
@@ -15,6 +12,7 @@ import java.time.LocalDateTime;
 
 @Slf4j
 @Getter
+@Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
