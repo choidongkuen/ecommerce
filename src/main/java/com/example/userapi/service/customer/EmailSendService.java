@@ -1,4 +1,4 @@
-package com.example.userapi.service;
+package com.example.userapi.service.customer;
 
 import com.example.userapi.client.MailGunClient;
 import com.example.userapi.client.mailgun.SendMailForm;

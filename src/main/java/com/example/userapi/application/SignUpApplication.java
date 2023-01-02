@@ -7,7 +7,7 @@ import com.example.userapi.domain.SignUpForm;
 import com.example.userapi.domain.model.Customer;
 import com.example.userapi.exception.CustomerException;
 import com.example.userapi.exception.ErrorCode;
-import com.example.userapi.service.SignUpCustomerService;
+import com.example.userapi.service.customer.SignUpCustomerService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.RandomStringUtils;
