@@ -12,8 +12,9 @@ import lombok.NoArgsConstructor;
 @Builder
 public class SendMailForm {
 
-    public String form;
+    public String from;
     public String to;
     public String subject;
     public String text;
+
 }
