@@ -1,9 +1,9 @@
-package com.example.userapi.service;
+package com.example.userapi.service.customer;
 
 
 import com.example.userapi.domain.SignUpForm;
 import com.example.userapi.domain.model.Customer;
-import com.example.userapi.domain.repository.CustomerRepository;
+import com.example.userapi.repository.CustomerRepository;
 import com.example.userapi.exception.CustomerException;
 import com.example.userapi.exception.ErrorCode;
 import lombok.RequiredArgsConstructor;
