@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import java.util.Objects;
+import java.util.Optional;
 
 @Slf4j
 @Service
@@ -17,6 +18,11 @@ import java.util.Objects;
 public class CustomerService {
 
     private final CustomerRepository customerRepository;
+
+    public Optional<Customer> findByIdAndEmail(Long id, String email) {
+
+        return customerRepository.findByIdAndEmail(id,email);
+    }
 
     public Customer findValidCustomer(String email, String password) {
 
