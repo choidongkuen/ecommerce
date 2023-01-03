@@ -10,26 +10,31 @@ import org.springframework.web.bind.annotation.*;
 
 
 
-@Slf4j
+@RestController
 @RequiredArgsConstructor
 @RequestMapping("/signup")
-@RestController
-
 public class SignUpController {
     private final SignUpApplication signUpApplication;
 
-    @PostMapping
-    public ResponseEntity<?> signUp(@RequestBody SignUpForm form) {
-        return ResponseEntity.ok(
-                signUpApplication.customerSignUp(form)
-        );
+    @PostMapping("/customer")
+    public ResponseEntity<?> customerSignUp(@RequestBody SignUpForm form){
+        return ResponseEntity.ok(signUpApplication.customerSignUp(form));
     }
 
+    @GetMapping("/customer/verify")
+    public ResponseEntity<?> verifyCustomer(String email, String code){
+        signUpApplication.customerVerify(email, code);
+        return ResponseEntity.ok("인증이 완료되었습니다");
+    }
 
-    @PutMapping("/verify/customer")
-    public ResponseEntity<?> verifyCustomer(String email, String code) {
+    @PostMapping("/seller")
+    public ResponseEntity<?> sellerSignUp(@RequestBody SignUpForm form){
+        return ResponseEntity.ok(signUpApplication.sellerSignUp(form));
+    }
 
-        signUpApplication.customerVerify(email,code);
-        return ResponseEntity.ok("인증이 완료되었습니다.");
+    @GetMapping("/seller/verify")
+    public ResponseEntity<?> verifySeller(String email, String code){
+        signUpApplication.sellerVerify(email, code);
+        return ResponseEntity.ok("인증이 완료되었습니다");
     }
 }

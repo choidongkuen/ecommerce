@@ -43,6 +43,8 @@ public class Customer extends BaseEntity {
 
     private boolean verified;
 
+    private Long balance;
+
     public static Customer from(SignUpForm form) {
 
         return Customer.builder()

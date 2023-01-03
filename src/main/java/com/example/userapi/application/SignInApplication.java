@@ -19,6 +19,7 @@ public class SignInApplication {
     private final SellerService sellerService;
     private final JwtAuthenticationProvider provider;
     public String customerLogin(SignInForm form){
+
         // 로그인 가능 여부
         Customer customer = customerService.findValidCustomer(form.getEmail(), form.getPassword());
         // 토큰 발행
